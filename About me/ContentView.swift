@@ -30,7 +30,7 @@ struct ContentView: View {
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 310.0, height: 300.0)
-                    .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(50.0)
                     .padding([.leading, .bottom, .trailing], 30.0)
                     
                 HStack(alignment: .top){
