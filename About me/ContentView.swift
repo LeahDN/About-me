@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var Info2 = " "
     @State var Info3 = " "
     @State var photo = "Famliy photo"
+    @State var num = 1
     var body: some View {
         
         ZStack{
@@ -73,7 +74,18 @@ struct ContentView: View {
                     .foregroundColor(Color(hue: 0.512,saturation: 0.46, brightness: 0.691))
                     .padding(.bottom)
                 Button("Picture") {
-                    photo = "About me pichture"
+                    if num == 3 {
+                        num = 0
+                    }
+                    num = num+1
+                    if num == 1 {
+                        photo = "Famliy photo"
+                    } else if num == 2 {
+                        photo = "About me pichture"
+                    } else {
+                        photo = "Cat"
+                    }
+                    
                 }
                 .padding(.all)
                 .buttonStyle(.borderedProminent)
